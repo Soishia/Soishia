@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glass Layout</title>
+  <style>
+    /* Warna dasar dan font */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #d9dce1; /* abu muda kayak di contoh */
+      font-family: 'Creato Display', sans-serif;
+    }
+
+    /* Container utama */
+    .glass-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      max-width: 900px;
+      width: 90%;
+    }
+
+    /* Setiap kotak di dalamnya */
+    .glass-item {
+      background: rgba(255, 255, 255, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Efek hover */
+    .glass-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    /* Responsif */
+    @media (max-width: 768px) {
+      .glass-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-container">
+    <div a href="SoishiaNo.html" class="glass-item">Info</div>
+    <div class="glass-item">Box 2</div>
+    <div class="glass-item">Box 3</div>
+    <div class="glass-item">Box 4</div>
+  </div>
+</body>
+</html>

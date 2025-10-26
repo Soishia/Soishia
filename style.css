@@ -1,0 +1,54 @@
+/* Background untuk melihat efek glass */
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://source.unsplash.com/800x600/?nature') no-repeat center/cover;
+    font-family: Arial, sans-serif;
+}
+.logo {
+    position: fixed; /* selalu di layar, tidak ikut scroll */
+    top: 20px;       /* jarak dari atas */
+    left: 20px;      /* jarak dari kiri */
+    width: 60px;     /* sesuaikan ukuran logo */
+    height: auto;
+    z-index: 1000;   /* biar selalu di atas elemen lain */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    filter: invert(50%) sepia(100%) saturate(500%) hue-rotate(150deg);
+}
+
+/* Glassmorphism menu */
+.glass-menu {
+    background: rgba(255, 255, 255, 0.2); /* transparan */
+    backdrop-filter: blur(10px);          /* efek blur */
+    -webkit-backdrop-filter: blur(10px);  /* support Safari */
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.glass-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.glass-menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.glass-menu a:hover {
+    color: #4CAF50;
+    transform: scale(1.1);
+}
