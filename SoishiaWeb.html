@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Soishia Vault — Portfolio</title>
+
+  <!-- Hubungkan file CSS -->
+  <link rel="stylesheet" href="Soishia.css">
+</head>
+
+<body>
+  <div class="app">
+    <aside class="side">
+      <div class="icon" aria-hidden></div>
+      <div class="logo-word"><img src="Soishia.png" alt="Soishia logo"></div>
+      <nav class="menu">
+        <a href="SoishiaNo.html">Menu</a>
+        <a href="SoishiaNo.html">Project</a>
+        <a href="SoishiaNo.html">Font</a>
+        <a href="SoishiaNo.html">Logo</a>
+        <a href="SoishiaNo.html">About</a>
+      </nav>
+      <div class="copyright">©2025 Soishia. All Right Reserved</div>
+    </aside>
+
+    <main class="main">
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+      <div class="grid">
+        <section class="card hero rounded">
+          <h1>Welcome To<br/><strong>SoishiaVault<span style="font-weight:900">™</span></strong></h1>
+          <p>Looking for something?</p>
+          <div class="img-wrap">
+            <img src="Tak berjudul13_20251028201809.png" alt="Soishia featured artwork">
+          </div>
+        </section>
+
+        <aside class="side-cards">
+          <div class="card small-card rounded clickable">
+            <h3>Upcoming Font - KIVA®</h3>
+            <div class="thumb"><img src="KivaThumbnail.png" alt="Kiva thumbnail"></div>
+          </div>
+          <div class="card small-card rounded clickable">
+            <h3>K-Soi Poster</h3>
+            <div class="thumb"><img src="K-Soi.png" alt="Poster thumbnail"></div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="lower-grid">
+        <div class="card rounded" style="padding:18px">
+          <h4>Project Highlight</h4>
+          <div style="height:140px; border-radius:10px; overflow:hidden">
+            <img src="ShowCase.png" alt="project" style="width:100%; height:100%; object-fit:cover">
+          </div>
+        </div>
+
+        <div class="card rounded" style="padding:18px">
+          <h4>Poster Series</h4>
+          <div style="height:140px; border-radius:10px; overflow:hidden">
+            <img src="project2.jpg" alt="Sorry :3" style="width:100%; height:100%; object-fit:cover">
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll('.clickable').forEach(el => {
+      el.addEventListener('click', () => window.location.href = 'SoishiaNo.html');
+    });
+
+    const toggle = document.querySelector('.menu-toggle');
+    const sidebar = document.querySelector('.side');
+    toggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+  </script>
+</body>
+</html>
